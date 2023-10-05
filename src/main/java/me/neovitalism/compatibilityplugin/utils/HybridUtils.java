@@ -15,26 +15,25 @@ public class HybridUtils {
         try {
             Class.forName("io.izzel.arclight.api.Arclight");
             arclight = true;
-//            return;
+            return;
         } catch(ClassNotFoundException ignored) {}
-//        try {
-//            Class.forName("com.mohistmc.MohistMC");
-//            mohist = true;
-//        } catch(ClassNotFoundException ignored) {}
+        try {
+            Class.forName("com.mohistmc.MohistMC");
+            mohist = true;
+        } catch(ClassNotFoundException ignored) {}
     }
 
     public static void registerListener(IEventBus eventBus, Object target) {
         if(arclight) {
             Arclight.registerForgeEvent(plugin, eventBus, target);
-//        } else if(mohist) {
-//            plugin.registerForgeEvent(eventBus, target);
+        } else if(mohist) {
+            plugin.registerForgeEvent(eventBus, target);
         } else eventBus.register(target);
     }
 
     public static void unregisterListener(IEventBus eventBus, Object target) {
-//        if(mohist) {
-//            plugin.unregisterForgeEvents(eventBus, target);
-//        } else
-            eventBus.unregister(target);
+        if(mohist) {
+            plugin.unregisterForgeEvents(eventBus, target);
+        } else eventBus.unregister(target);
     }
 }

@@ -3,6 +3,6 @@ version: 1.0.0
 author: Neovitalism
 main: me.neovitalism.compatibilityplugin.CompatibilityPlugin
 description: A plugin that brings Pixelmon Compatibility to other plugins.
-api-version: 1.16
+api-version: 1.20
 
 softdepend: [BattlePass,NeoExtras]
