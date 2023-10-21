@@ -17,7 +17,7 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 
 minecraft {
-    mappings channel: 'official', version: '1.20.1'
+    mappings channel: 'official', version: '1.20.2'
 }
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
@@ -57,17 +57,15 @@ repositories {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.20.1-47.1.44'
+    minecraft 'net.minecraftforge:forge:1.20.2-48.0.30'
     implementation 'org.jetbrains:annotations:24.0.1'
     implementation 'io.izzel.arclight:arclight-api:1.5.4'
-    implementation 'com.mohistmc:mohistdev:1.20.1'
-    implementation fg.deobf('pixelmon:Pixelmon-1.20.1-9.2.3-server:9.2.3')
+    implementation 'com.mohistmc:mohistdev:1.20.2'
+    implementation fg.deobf('pixelmon:Pixelmon-1.20.2-9.2.4-server:9.2.4')
 
     compileOnly files('libs/BattlePass-4.0.9.jar')
     compileOnly files('libs/ClueScrolls-4.8.7.jar')
     compileOnly files('libs/NeoExtras-2.0.0-BETA-12.jar')
-
-//    compileOnly 'org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT'
 }
 
 jar.finalizedBy('reobfJar')
