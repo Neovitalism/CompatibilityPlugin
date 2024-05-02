@@ -22,7 +22,7 @@ minecraft {
 
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
-version = '1.20-1.0.6'
+version = '1.20-1.0.7'
 group = 'me.neovitalism.compatibilityplugin'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -61,7 +61,7 @@ dependencies {
     implementation 'org.jetbrains:annotations:24.0.1'
     implementation 'io.izzel.arclight:arclight-api:1.5.4'
     implementation 'com.mohistmc:mohistdev:1.20.2'
-    implementation fg.deobf('pixelmon:Pixelmon-1.20.2-9.2.5-server:9.2.5')
+    implementation fg.deobf('pixelmon:Pixelmon-1.20.2-9.2.7-server:9.2.7')
 
     compileOnly files('libs/BattlePass-4.0.9.jar')
     compileOnly files('libs/ClueScrolls-4.8.7.jar')
