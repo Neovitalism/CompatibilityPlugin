@@ -3,7 +3,7 @@ package me.neovitalism.compatibilityplugin.battlepass.quests;
 import com.pixelmonmod.pixelmon.api.events.PixelmonKnockoutEvent;
 import me.neovitalism.compatibilityplugin.battlepass.PixelmonQuestContainer;
 import me.neovitalism.compatibilityplugin.internal.events.PixelmonEvent;
-import net.minecraft.entity.player.ServerPlayerEntity;
+import net.minecraft.server.level.ServerPlayer;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -18,7 +18,7 @@ public class KillPokemonQuest extends PixelmonQuestContainer {
     public void onDefeat(PixelmonEvent pixelmonEvent) {
         if(pixelmonEvent.getPixelmonEvent() instanceof PixelmonKnockoutEvent) {
             PixelmonKnockoutEvent event = (PixelmonKnockoutEvent) pixelmonEvent.getPixelmonEvent();
-            ServerPlayerEntity serverPlayerEntity = event.source.getPlayerOwner();
+            ServerPlayer serverPlayerEntity = event.source.getPlayerOwner();
             if(serverPlayerEntity != null) {
                 Player player = Bukkit.getPlayer(serverPlayerEntity.getUUID());
                 if(player != null) {
